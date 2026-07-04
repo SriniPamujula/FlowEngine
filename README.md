@@ -123,6 +123,7 @@ No scripting. No YAML. No DAG files. No additional software purchases.
 
 ### 🔄 Self-Healing & Resilience
 - Automatic error detection and classification
+- **Root cause analysis** — on task failure, provides reasoning for the failure and recommended fix
 - Smart auto-retry with configurable backoff
 - Source system monitoring: polls every 5 minutes until available
 - All dependent pipelines hold automatically when upstream is down
