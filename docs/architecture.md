@@ -17,14 +17,14 @@ graph TB
     end
 
     subgraph Manifest["📋 Engine Manifest (AES-256 Encrypted)"]
-        CONFIG[Pipeline Definitions<br/>Source | Target | Schedule<br/>Dependencies | Parameters]
+        CONFIG[Pipeline Definitions<br/>Source, Target, Schedule<br/>Dependencies, Parameters]
         VERSIONS[Version History]
     end
 
     subgraph Agent["⚙️ Engine Agent (Autonomous Orchestrator)"]
         SCHEDULER[Scheduler]
         DAG[DAG Resolver<br/>Parent-Child + Cross-Pipeline]
-        RESOURCE[Resource Analyzer<br/>Memory | Disk | Cores]
+        RESOURCE[Resource Analyzer<br/>Memory, Disk, Cores]
         EXECUTOR[Multi-Threaded Executor<br/>Parallel Processing]
         HEALER[Self-Healer<br/>Error Analysis + Auto-Retry]
         POLLER[Source Poller<br/>5-min intervals]
@@ -49,7 +49,7 @@ graph TB
     end
 
     subgraph Alerting["📧 Alerting"]
-        EMAIL[Email Reports<br/>Tables + Graphs + Row Counts]
+        EMAIL[Email Reports<br/>Tables, Graphs, Row Counts]
         VALID[Data Validation<br/>Quality Checks]
     end
 
