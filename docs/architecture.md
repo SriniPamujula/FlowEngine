@@ -156,35 +156,34 @@ graph LR
 
 ## Infrastructure
 
-```
-┌─────────────────────────────────────┐
-│ Single Server: 4 Cores, 16 GB RAM   │
-│                                      │
-│ ┌──────────────────────────────┐    │
-│ │ Engine Agent (PowerShell)     │    │
-│ │ 6,000+ lines                  │    │
-│ │ Multi-threaded execution      │    │
-│ │ DAG resolver                  │    │
-│ │ Resource manager              │    │
-│ └──────────────────────────────┘    │
-│                                      │
-│ ┌──────────────────────────────┐    │
-│ │ SQL Server                    │    │
-│ │ Engine Manifest (versioned)   │    │
-│ │ Execution logs                │    │
-│ │ Audit trail                   │    │
-│ └──────────────────────────────┘    │
-│                                      │
-│ ┌──────────────────────────────┐    │
-│ │ IIS / Web Portal              │    │
-│ │ ASP.NET Web Forms             │    │
-│ │ Multi-persona dashboard       │    │
-│ └──────────────────────────────┘    │
-│                                      │
-│ Results:                             │
-│ • 1,500+ jobs                        │
-│ • 1.5M+ task runs in 6 months       │
-│ • 2B+ rows processed in 2 hours     │
-│ • 99.9999% resiliency               │
-└─────────────────────────────────────┘
+```mermaid
+graph TB
+    subgraph Server["Single Server: 4 Cores, 16 GB RAM"]
+        subgraph EngineBlock["Engine Agent - PowerShell"]
+            PS[6,000+ lines of code]
+            MT[Multi-threaded execution]
+            DAGR[DAG resolver]
+            RM[Resource manager]
+        end
+
+        subgraph DBBlock["SQL Server"]
+            MAN[Engine Manifest - versioned]
+            LOGS[Execution logs]
+            AUD[Audit trail]
+        end
+
+        subgraph WebBlock["IIS Web Portal"]
+            ASP[ASP.NET Web Forms]
+            MPD[Multi-persona dashboard]
+        end
+    end
+
+    subgraph Results["Results"]
+        R1["1,500+ jobs"]
+        R2["1.5M+ task runs in 6 months"]
+        R3["2B+ rows processed in 2 hours"]
+        R4["99.9999% resiliency"]
+    end
+
+    Server --> Results
 ```
