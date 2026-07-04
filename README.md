@@ -6,15 +6,18 @@ Enterprise No-Code Data Pipeline Orchestration Platform — built at Johns Hopki
 
 | Metric | Value |
 |--------|-------|
+| Adoption | **Enterprise standard** — replaced SSIS, became the sole pipeline system |
 | Analytical Teams | 10+ |
 | End Users | 200+ |
 | Jobs Onboarded | 1,500+ in 6 months |
+| Task Runs | 1.5+ million within 6 months |
 | Resiliency | 99.9999% |
 | Data Processed | 2+ billion rows within 2 hours |
 | Infrastructure | 4 cores, 16 GB RAM (no additional hardware/software purchase) |
 | Cost Model | Generated revenue via departmental chargeback |
 | Critical Use | COVID-19 data submissions (federal, state, local agencies) |
 | Scalability | Unlimited — only constrained by management's desired scope |
+| Software Replaced | SSIS and other legacy ETL tools — fully decommissioned |
 
 ---
 
@@ -180,6 +183,8 @@ Each pipeline automatically handles the full workflow:
 | Differentiator | Detail |
 |---------------|--------|
 | **Zero cost** | No software licenses purchased. PowerShell + existing infrastructure only |
+| **Replaced SSIS** | Became the sole enterprise pipeline system — legacy tools fully decommissioned |
+| **1.5M+ task runs** | Over 1.5 million successful task executions in 6 months |
 | **Minimal hardware** | 4 cores, 16 GB RAM processes 2B+ rows and 1,500+ jobs |
 | **Unlimited scalability** | Architecture scales horizontally — only constraint is organizational scope |
 | **Battle-tested** | COVID-19 federal reporting. High-pressure, small-window deliveries |
